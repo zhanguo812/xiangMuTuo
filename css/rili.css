@@ -1,0 +1,135 @@
+@media screen and (min-width:1200px) {
+  .calendar {
+    width: 550px;
+  }
+}
+
+@media screen and (min-width:1100px) and (max-width: 1199px) {
+  .calendar {
+    width: 520px;
+  }
+}
+
+@media screen and (min-width:991px) and (max-width: 1100px) {
+  .calendar {
+    width: 470px;
+  }
+}
+
+.calendar {
+  height: 362px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: white;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.title {
+  height: 70px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  position: relative;
+  text-align: center;
+}
+
+#calendar-title {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 14px 0 0 0;
+}
+
+#calendar-year {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+#pre {
+  position: absolute;
+  top: 45px;
+  left: 100px;
+  background: url(/image/left_ar.png) no-repeat 50% 50%;
+
+  /*没规定大小时，图片显示 0X0*/
+  width: 10px;
+  height: 15px;
+  background-color: #888888;
+  ;
+}
+
+#next {
+  position: absolute;
+  top: 45px;
+  right: 100px;
+  background: url(/image/right_ar.png) no-repeat 50% 50%;
+  width: 10px;
+  height: 15px;
+  background-color: #888888;
+  ;
+}
+
+#next:hover,
+#pre:hover {
+  background-color: #444;
+}
+
+.body-list ul {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.body-list ul li {
+  list-style: none;
+  /*
+            display:inline-block; 
+            width: 13.3%;
+            */
+
+  /*100/7 = 14.28%*/
+  display: block;
+  width: 14.28%;
+  float: left;
+
+  /*规定行高，垂直居中*/
+  height: 36px;
+  line-height: 36px;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+
+.green {
+  color: rgb(96, 127, 185);
+  ;
+}
+
+.lightgrey {
+  /*浅灰色显示过去的日期*/
+  color: #a8a8a8;
+}
+
+.darkgrey {
+  /*深灰色显示将来的日期*/
+  color: #565656;
+
+}
+
+.darkgrey:hover,
+.lightgrey:hover {
+  box-shadow: 0 0 2px #d0d0d0;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+/*日期当天用绿色背景绿色文字加以显示*/
+.greenbox {
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 0 2px #d0d0d0;
+  /* #6ac13c */
+  background: #e9f8df;
+}

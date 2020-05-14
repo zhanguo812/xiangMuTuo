@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/rili.css">
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+<body>
+  <div id="index">
+    <!-- 日程安排 -->
+    <div class="index-content" id="mo1" style="display: none;">
+      <div class="index-content-header">
+        <span class="iconfont icon-richeng" style="margin:0;padding:0"></span>
+        <span style="margin:0;padding:0">日程安排</span>
+      </div>
+      <div style="width: 100%;height:100%;display:none" id="rili">
+        <div class="calendar">
+          <div class="title">
+            <h1 class="green" id="calendar-title">Month</h1>
+            <h2 class="green" id="calendar-year">Year</h2>
+            <a href="" id="pre"></a>
+            <a href="" id="next"></a>
+          </div>
+          <div class="body">
+            <div class="lightgrey body-list">
+              <ul>
+                <li>星期天</li>
+                <li>星期一</li>
+                <li>星期二</li>
+                <li>星期三</li>
+                <li>星期四</li>
+                <li>星期五</li>
+                <li>星期六</li>
+              </ul>
+            </div>
+            <div class="body-list">
+              <ul id="days">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 工作任务 -->
+    <div class="index-content" id="mo2" style="display: none;">
+      <div class="index-content-header" id="daibanshixiang">
+        <span class="active active_1" div_obj="div1"><span class="iconfont icon-zuotutongji"></span>工作任务</span>
+        <span class="active" div_obj="div2"><span class="iconfont icon-huiyitongzhi"></span>会议通知</span>
+      </div>
+      <div class="table-shixiang display" id="div1" style="display: none;">
+        <!-- 内容模板 -->
+        <!-- <div class="tanxinhezi">
+          <span class="table-shixiang-span">1.</span>
+          <p class="table-shixiang-p1">内容dasdasdsadasdwqdeqweqweqweqwfsdfsdafqedfqwedwdwqdwqdwqdqw</p>
+          <p class="table-shixiang-p2">人名</p>
+          <p class="table-shixiang-p3">时间</p>
+        </div> -->
+        <iframe width="100%" height="97%" frameborder="0" scrolling="no"
+          src="http://47.93.242.234:9095/kaiyue/./roa/msgRemind.do?method=getTaskToDo&amp;menu_id=181102165939597eb3caf961b335fcef">
+        </iframe>
+      </div>
+      <div class="table-shixiang" style="font-size: 15px;color:rgb(133, 151, 165);display: none;" id="div2">
+        <!-- 内容模板 -->
+        <!-- <div class="tanxinhezi">
+          <span class="table-shixiang-span">1.</span>
+          <p class="table-shixiang-p1">内容dasdasdsadasdwqdeqweqweqweqwfsdfsdafqedfqwedwdwqdwqdwqdqw</p>
+          <p class="table-shixiang-p2">人名</p>
+          <p class="table-shixiang-p3">时间</p>
+        </div> -->
+        <iframe width="100%" height="97%" frameborder="0" scrolling="no"
+          src="http://47.93.242.234:9095/kaiyue/./roa/msgRemind.do?method=meetingMain&amp;moreFlag=false&amp;menu_id=181102165722455bbe716a84cb668078">
+        </iframe>
+      </div>
+    </div>
+    <!-- 未读邮件 -->
+    <div class="index-content" id="mo3" style="display: none;">
+      <div class="index-content-header">
+        <span class="iconfont icon-weiduyoujian"></span>
+        <span style="margin:0;padding:0">未读邮件</span>
+      </div>
+      <div class="index-content-email-content" style="font-size:14px;display: none" id="email">
+        <!-- 内容模板 -->
+        <iframe width="100%" height="85%" frameborder="0" scrolling="no"
+          src="http://47.93.242.234:9095/kaiyue/roa/msgRemind.do?method=mailMain&amp;moreFlag=false&amp;menu_id=1805221511395760af08a267bc1c30b3">
+        </iframe>
+        <!-- <div>
+          <span class="table-shixiang-span">
+            <img src="/image/newmail.gif" alt="" style="padding:3px 20px">
+          </span>
+          <p class="table-shixiang-p1">新邮件信息</p>
+          <p class="table-shixiang-p2">候占国</p>
+          <p class="table-shixiang-p3">2020-05-09</p>
+        </div>
+        <div>
+          <span class="table-shixiang-span">
+            <img src="/image/newmail.gif" alt="" style="padding:3px 20px">
+          </span>
+          <p class="table-shixiang-p1">新邮件信息</p>
+          <p class="table-shixiang-p2">魏世康</p>
+          <p class="table-shixiang-p3">2020-05-09</p>
+        </div>
+        <div>
+          <span class="table-shixiang-span">
+            <img src="/image/newmail.gif" alt="" style="padding:3px 20px">
+          </span>
+          <p class="table-shixiang-p1">新邮件信息</p>
+          <p class="table-shixiang-p2">李阳</p>
+          <p class="table-shixiang-p3">2020-05-09</p>
+        </div> -->
+      </div>
+    </div>
+    <!-- 企业咨询 -->
+    <div class="index-content" id="mo4" style="display: none;">
+      <div class="index-content-header">
+        <span class="iconfont icon-richeng"></span>
+        <span style="margin:0;padding:0">企业资讯</span>
+      </div>
+      <!-- 轮播图 -->
+      <main id="main" style="display: none;">
+        <div id="banner">
+          <div id="btn-left"></div>
+          <ul id="ul-imgs" style="width:5000px; margin-left:0px;">
+            <li><a href="javascript:;"><img src="/image/1f71c5cc337f1c7674c5119bde1b0f05.jpg"></a></li>
+            <li><a href="javascript:;"><img src="/image/36c12f867666a11d21193fd36d806de9.jpg"></a></li>
+            <li><a href="javascript:;"><img src="/image/7028f5ac386f31e08d5c4c795610270e.jpg"></a></li>
+            <li><a href="javascript:;"><img src="/image/76b85a0c4535c7e71f382bbdf32a87d4.jpg"></a></li>
+            <!--注意！最后li个数要比实际图片张数多1，最后一个li里的img是重复第一张li的图片-->
+            <li><a href="javascript:;"><img src="/image/1f71c5cc337f1c7674c5119bde1b0f05.jpg"></a></li>
+          </ul>
+          <ul id="ul-idxs">
+            <!--虽然li个数比实际图片张数多1，但小圆点的个数不必多1-->
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div id="btn-right"></div>
+        </div>
+      </main>
+    </div>
+    <!-- 新闻通知-->
+    <div class="index-content" id="mo5" style="display: none;">
+      <div class="index-content-header">
+        <span class="iconfont icon-richeng"></span>
+        <span style="margin:0;padding:0">新闻通知</span>
+      </div>
+      <div class="index-content-xinwen" style="display: none;" id="xinwen">
+        <!-- 内容模板 -->
+        <!-- <div>
+          <span class="table-shixiang-span">
+            <span class="iconfont icon-xinwentongzhi"></span>
+          </span>
+          <p class="table-shixiang-p1">新闻主题</p>
+          <p class="table-shixiang-p2">李阳</p>
+          <p class="table-shixiang-p3">2020-05-09</p>
+        </div>
+        <div>
+          <span class="table-shixiang-span">
+            <span class="iconfont icon-xinwentongzhi"></span>
+          </span>
+          <p class="table-shixiang-p1">新闻主题</p>
+          <p class="table-shixiang-p2">李阳</p>
+          <p class="table-shixiang-p3">2020-05-09</p>
+        </div>
+        <div>
+          <span class="table-shixiang-span">
+            <span class="iconfont icon-xinwentongzhi"></span>
+          </span>
+          <p class="table-shixiang-p1">新闻主题</p>
+          <p class="table-shixiang-p2">李阳</p>
+          <p class="table-shixiang-p3">2020-05-09</p>
+        </div> -->
+        <iframe width="100%" height="150%" frameborder="0" scrolling="no"
+          src="http://47.93.242.234:9095/kaiyue/roa/msgRemind.do?method=listIssueInfo&amp;fsystemId=1411071114269105ae89c5a90b9a66b9&amp;menu_id=181102170030691abd0ab698342ac12b">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/echarts.min.js"></script>
+  <!-- <script src="js/rili.js"></script> -->
+  <!-- <script src="js/Carousel.js"></script> -->
+  <!-- <script src="js/index.js"></script> -->
+  <script src="js/Biao.js"></script>
+  <script type="module" src="js/1.js"></script>
+</body>
+
+</html>
